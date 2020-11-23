@@ -1,0 +1,29 @@
+#library-img{
+    height: 600px;
+}
+
+
+#formulario{
+    background-color: cadetblue;
+}
+
+.container{
+    display: flex;
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    align-items: center;
+}
+
+.logo{
+    width: 45%;
+}
+
+.align{
+    margin: 0 auto;
+}
+
+a{
+    font-weight: 400;
+    color: darkgreen;
+
+}

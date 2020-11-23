@@ -1,0 +1,39 @@
+{% extends 'usersApp/base.html' %}
+
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+
+<div class="container text-center" >
+    <div class="row" style="margin: 0 auto; background: rgb(130, 182, 130);padding: 50px;">
+        <div class="col-4">
+          <h3>Loans</h3> 
+           <!--messege if the book was borrowed  -->
+          <h4 class="mt-4" style="color: rgb(235, 59, 59);">{{mensaje}}</h4>
+        </div>
+        <!-- form to add a loan -->
+        <div class="col-8">
+            <form action="" method="POST">
+                {% csrf_token %}
+                    {{ form.as_p}} 
+                    <button type="submit" class="btn mr-5" style="background-color: rgb(149, 201, 149);">Add</button> 
+                    <a href="{% url 'loansApp:loans' %}" class="btn btn-info" >Back</a>
+            </form>
+        </div>
+       
+    </div>
+
+        
+        
+    
+</div>
+
+
+
+{% else %}
+
+<h3>Login First Please</h3>
+
+{% endif %}
+{% endblock %}
+

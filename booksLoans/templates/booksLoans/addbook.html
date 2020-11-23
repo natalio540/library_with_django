@@ -1,0 +1,33 @@
+{% extends 'usersApp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<div class="container text-center" >
+    <div class="row" style="margin: 0 auto; background: rgb(130, 182, 130);padding: 50px;">
+        <div class="col-4">
+          <h3>Books</h3>  
+        </div>
+        <!-- form to add book-->
+        <div class="col-8">
+            <form action="" method="POST">
+                {% csrf_token %}
+                    {{ form.as_p}} 
+                    <button type="submit" class="btn mr-5" style="background-color: rgb(149, 201, 149);">Add</button> 
+                    <a href="{% url 'booksLoans:books' %}" class="btn btn-info" >Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% else %}
+<div class="container">
+    <h3>Login First Please</h3>
+</div>
+
+
+{% endif %}
+
+{% endblock %}

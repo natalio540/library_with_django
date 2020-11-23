@@ -1,0 +1,35 @@
+{% extends 'usersApp/baselogin.html '%}
+{% block content %}
+
+<html>
+    <body>
+        <div id="formulario" class="col-6">
+            <h3 class="mb-4 mt-4">Register new User</h3>
+
+           
+            <form method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <div class="text-center mt-5">
+                    <button type="submit" class="btn btn-success text-center">Register</button>
+                </div>
+                
+            </form>
+
+            <hr />
+            
+            <div class="text-center">
+                <a href="/login">Sign In</a>
+            </div>    
+                
+           
+                
+           
+        </div>
+
+
+        
+    </body>
+</html>
+
+{% endblock %}

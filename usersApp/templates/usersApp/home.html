@@ -1,0 +1,14 @@
+{% extends 'usersApp/base.html' %}
+
+
+{% block content %}
+   
+<div class="container">
+    <h3>Welcome {{request.user.username}}  <br> to the Library work Space</h3>
+    <p class="ml-5">You have the option to work with Clients, Books or Loans section. <br>
+    you can add, delete or update elements on each section.  <br>
+   Cheers</p>
+</div>
+
+
+{% endblock %}

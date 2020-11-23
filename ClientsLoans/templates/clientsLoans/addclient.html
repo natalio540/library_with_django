@@ -1,0 +1,32 @@
+{% extends 'usersApp/base.html' %}
+
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+
+<div class="container">
+    <div class="row" style="margin: 0 auto; background: rgb(130, 182, 130);padding: 50px;">
+        <div class="col-6">
+          <h3>Add a new Client</h3>  
+        </div>
+        <!-- form to add client -->
+        <div class="col-6">
+            <form action="" method="POST">
+                {% csrf_token %}
+                    {{ form.as_p}} 
+                    <button type="submit" class="btn mr-5" style="background-color: rgb(149, 201, 149);">Add</button> 
+                    <a href="{% url 'clientsLoans:clients' %}" class="btn btn-info" >Back</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<h3>Login First Please</h3>
+
+{% endif %}
+
+{% endblock %}

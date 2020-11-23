@@ -1,0 +1,25 @@
+{% extends 'usersApp/baselogin.html' %}
+{% load static %}
+
+
+
+        {% block content%}
+
+        <div id="formulario" class="col-6 text-center">
+            <h2 class="m-2">Library of Charbonier Town</h2>
+
+            <img src=" {% static '/img/comuna.jpg' %} " alt="" class="logo mt-2 mb-4">
+
+            <h4 class="titulo">Sign In</h4>
+
+            <form method="POST">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+
+            <hr />
+            <a href="/register" class="btn btn-warning">Sign Up</a>
+        </div>
+
+        {% endblock %}
