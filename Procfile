@@ -1,1 +1,1 @@
-web: gunicorn linpanel.wsgi
+web: gunicorn libpanel.wsgi
