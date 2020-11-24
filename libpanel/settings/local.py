@@ -14,7 +14,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'librarydb',
         'USER':'postgres',
-        'PASSWORD':'balumba540...---',
+        'PASSWORD':'',
         'HOST':'127.0.0.1',
         'DATABASE_PORT':'5432',
     }
